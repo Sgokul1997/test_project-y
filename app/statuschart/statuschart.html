@@ -1,0 +1,195 @@
+<div ng-include="'sidebar.html'"></div>
+   <div class="page home-page">     
+   <div ng-include="'header.html'"></div>
+   
+
+    <!-- <link rel="stylesheet" type="text/css" href="<some-path>/grasp_mobile_progress_circle-1.0.0.min.css">
+   <script src="<some-path>/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/charts-home.js"></script>
+    <script src="assets/js/front.js"></script>-->
+
+  
+ 
+    <section class="statistics section-padding section-no-padding-bottom section_top">
+        <div class="container-fluid">
+            <header>
+
+        <div ng-show="myLoader" class="spinner">
+            <img src="assets/images/spinner.gif" class="myspin">
+        </div>
+        
+    <h1 class="h3 display reprttop"><i class="fa fa-laptop"></i>Report
+        <!-- <a href="" class="btn_top" ng-click="exportData()"><i class="fa fa-share-square-o" aria-hidden="true"></i>Export</a> -->
+      
+        </h1>
+          </header>
+          <div class="card card_status">
+              <div class="card-block">
+                   <form name="repot">
+                  <div class="row">
+                         
+                      <div class="col-md-2">
+                          <div class="form-group">
+                              <div class="form-group">
+                                  <label>Select Machine</label>
+                                  <div class="select">
+                                      <select name="account" class="form-control" ng-options="mc.id as mc.machine_name for mc in allmachines" ng-model="MachineID" ng-change="checkingmachineid()">
+                                          <option value="">ALL</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- <div class="col-md-2">
+                          <div class="form-group">
+                              <div class="form-group">
+                                  <label>Select Type</label>
+                                  <div class="select">
+                                  <select class="form-control" ng-model="types" ng-Required="true" ng-change="mychange(types)">
+                                  <option value="">Select type</option>
+                                 <option value="{{type.value}}" ng-repeat="type in selecttype.data" >{{type.value}}</option>
+                                 
+
+                                  </select>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> -->
+                     
+                      <!-- <div class="col-md-2" ng-hide="wise=='Datewise Utilization'|| wise == 'Monthwise Utilization' ">
+                          <div class="form-group">
+                              <div class="form-group">
+                                  <label>Split</label>
+                                  <div class="select">
+                                  <select class="form-control" ng-model="split" ng-change="checkhour(split.value)" ng-options="val.value for (key , val) in selectsplit.data">
+                                  <option value="">All</option>
+                                  </select>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> -->
+
+                      <!-- <div class="col-md-2">
+                          <div class="form-group">
+                              <div class="form-group">
+                                  <label></label>
+                                  <div class="input-group">
+                                  <input type="checkbox" ng-change="checkhour()" ng-model="hourtype">Hourwise 
+                                  <input type="checkbox" ng-change="checkhour()" ng-model="programNo">ProgramNumber
+                              </div>
+                              </div>
+                          </div>
+                      </div> -->
+
+                      <div class="col-md-2" >
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>Select Shift</label>
+                                <div class="select">
+                                    <select name="account" class="form-control" ng-options="sh.id as sh.shift_no for sh in shiftstransfordrop" ng-model="ShiftID"  ng-change="checkingshiftid()">
+                                        <option value="">ALL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      
+
+                     
+
+                      <div class="col-md-2">
+                          <div class="form-group" moment-picker="from_date"  format="YYYY-MM-DD" max-date="momentToday">
+                              <label>From Date</label>
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                  <input type="text" class="form-control" ng-Required="true"  ng-model="from_date"  >
+                              </div>
+                          </div>
+                      </div>
+                      <!-- ng-show="momentToday != from_date " max-date="momentToday1" -->
+                      <!-- <div class="col-md-2">
+                          <div class="form-group" moment-picker="to_date"   format="YYYY-MM-DD" min-date="from_date" max-date="momentToday">
+                              <label>To Date</label>
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                  <input type="text" class="form-control"  ng-Required="true"  ng-model="to_date">
+                              </div>
+                          </div>
+                      </div> -->
+
+                      <!-- <div class="col-md-2" ng-if="momentToday == from_date ">
+                          <div class="form-group" moment-picker="to_date"  format="YYYY-MM-DD" min-date="momentToday" max-date="momentToday">
+                              <label>To Date1</label>
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                  <input type="text" class="form-control" ng-Required="true" ng-model="to_date">
+                              </div>
+                          </div>
+                      </div> -->
+
+                      
+
+                      
+                      <!-- <div class="col-md-2" ng-show="wise=='Operatorwise'">
+                          <div class="form-group">
+                      <label>Operator</label>
+                      <div class="select">
+                          <select name="account" class="form-control" ng-options="operator.id as operator.operator_name for operator in operators" ng-model="operator_id"  class="btn btn-default select-width selectpicker form-control" ng-change="checkingopid()">
+                              <option value="">Select Operator</option>
+                          </select>
+                      </div>
+                      
+                  </div>
+                      </div> -->
+                      <div class="col-md-2"> 
+                          <div class="form-group">
+                              <div class="form-group">
+                                  <button class="btn btn-success btn_report" ng-click="viewData()" ng-disabled="repot.$invalid"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </section>
+
+ 
+  <div class="row individual_chart">
+    <div class="col-lg-6"  >
+        <div class="card report_pie_chart" >  
+            <div id="partcycle" ></div>
+        </div>
+    </div>
+   
+
+
+<div class="col-lg-6"  >
+    <div class="card report_pie_chart">  
+        
+        <div id="partwithhour" ></div>
+    </div>
+</div>
+</div>
+
+<div class="row individual_chart">
+    <div class="col-lg-6"  >
+        <div class="card report_pie_chart" >  
+            <div id="hourwise" ></div>
+        </div>
+    </div>
+   
+
+
+<div class="col-lg-6"  >
+    <div class="card report_pie_chart">  
+        
+        <div id="utilization" ></div>
+    </div>
+</div>
+</div>
+
+    <div ng-include="'footer.html'"></div>
+    </div>
+
+
+
+    <!-- <script src="https://code.highcharts.com/highcharts-3d.js"></script> -->

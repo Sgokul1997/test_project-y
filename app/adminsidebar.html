@@ -1,0 +1,46 @@
+<!-- Side Navbar -->
+<nav class="side-navbar">
+    <div class="side-navbar-wrapper">
+      <div class="sidenav-header d-flex align-items-center justify-content-center">
+        <img src="assets/images/logo.jpg" alt="person">
+      </div>
+      <div class="main-menu">
+                      
+      
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+           
+             <li ng-class="{activebar:sidepath=='companydetails'}" class=""><a href="" ng-click="pageverification1('/#!/companydetails')"><i class="fa fa-desktop" aria-hidden="true" ></i><span>Machine Status</span></a></li>
+             <li ng-class="{activebar:sidepath=='alldetails'}" class=""><a href="" ng-click="pageverification1('/#!/alldetails')"><i class="fa fa-check-circle " aria-hidden="true" ></i><span>Approval</span></a></li>
+             <li ng-class="{activebar:sidepath=='adminuser'}" class=""><a href="" ng-click="pageverification1('/#!/adminuser')"><i class="fa fa-user-o" aria-hidden="true" ></i><span>Admin User</span></a></li>
+             <li ng-class="{activebar:sidepath=='setting'}" class=""><a href="" ng-click="pageverification1('/#!/setting')"><i class="fa fa-cogs" aria-hidden="true" ></i><span>Setting</span></a></li>
+             
+             <li ng-class="{activebar:sidepath=='device'}" class=""><a href="" ng-click="pageverification1('/#!/device')"><i class="fa fa-tablet" aria-hidden="true" ></i><span>Device</span></a></li>
+
+             <li ng-class="{activebar:sidepath=='tenant'}" class=""><a href="" ng-click="pageverification1('/#!/tenant')"><i class="fa fa-users" aria-hidden="true" ></i><span>Customer Details</span></a></li>
+             <li ng-class="{activebar:sidepath=='register_tenant'}" class=""><a href="" ng-click="pageverification1('/#!/register_tenant')"><i class="fa fa-university" aria-hidden="true" ></i><span>Company Details</span></a></li>
+
+              <li ng-class="{activebar:sidepath=='install_details'}" class=""><a href="" ng-click="pageverification1('/#!/install_details')"><i class="fa fa-info" aria-hidden="true" ></i><span>Install Details</span></a></li>
+
+               <li ng-class="{activebar:sidepath=='tenantmachine'}" class=""><a href="" ng-click="pageverification1('/#!/tenantmachine')"><i class="fa fa-list-alt" aria-hidden="true" ></i><span>Machine Details</span></a></li>
+
+              <!--  <li ng-class="{activebar:sidepath=='tenantpayment_type'}" class=""><a href="" ng-click="pageverification1('/#!/tenantpayment_type')"><i class="fa fa-money" aria-hidden="true" ></i><span>Tenant Payment Type</span></a></li> -->
+
+                <li ng-class="{activebar:sidepath=='payment'}" class=""><a href="" ng-click="pageverification1('/#!/payment')"><i class="fa fa-cc-visa" aria-hidden="true" ></i><span>Tenant Payment</span></a></li>
+
+                <li ng-class="{activebar:sidepath=='item'}" class=""><a href="" ng-click="pageverification1('/#!/item')"><i class="fa fa-file" aria-hidden="true" ></i><span>Item Details</span></a></li>                
+
+             <li ng-class="{activebar:sidepath=='device_registration'}" class=""><a href="" ng-click="pageverification1('/#!/device_registration')"><i class="fa fa-tablet" aria-hidden="true" ></i><span>Device Registration</span></a></li>
+            </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+
+
+
+<style type="text/css">
+.activebar{
+background-color:#f7941d;
+}
+</style>
