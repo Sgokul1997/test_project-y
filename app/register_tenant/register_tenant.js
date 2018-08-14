@@ -102,7 +102,7 @@ angular.module('register_tenant', ['ngRoute'])
 
 
     $scope.edit = function (id) {
-      alert(id);
+     // alert(id);
 
       $scope.selectedOption = "";
       $scope.rj_count = "";

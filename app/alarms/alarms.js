@@ -258,6 +258,8 @@ angular.module('alarms', ['ngRoute'])
         saveAs(blob, "Report.xls");
       };
 
+      
+
       //$scope.typewise=["Shiftwise"]
       $scope.alarmtypewise = ["Shiftwise", "Operatorwise"]
       $scope.mychange1 = function (man) {

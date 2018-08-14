@@ -49,6 +49,7 @@ angular.module('myApp', [
   'device',
   'setting',
   'tenant',
+  'testchart',
   'device_registration',
   'changepassword',
   'highcharts-ng',
@@ -80,7 +81,7 @@ config(['$locationProvider', '$routeProvider', function ($locationProvider, $rou
       //console.log($rootScope.currentPath)
       if (localStorage.getItem("tenant_id") == null && $rootScope.currentPath != '/registration' && $rootScope.currentPath != '/alldetails' && $rootScope.currentPath != '/companydetails' && $rootScope.currentPath != '/frontpage' && $rootScope.currentPath != '/adminuser' && $rootScope.currentPath != '/device' && $rootScope.currentPath != '/setting' && $rootScope.currentPath != '/register_tenant' && $rootScope.currentPath != '/tenant' && $rootScope.currentPath != '/paymenttype' && $rootScope.currentPath != '/tenantmachine' && $rootScope.currentPath != '/tenantpayment_type' && $rootScope.currentPath != '/install_details'
         && $rootScope.currentPath != '/device_registration'  && $rootScope.currentPath != '/payment' && $rootScope.currentPath != '/outviewdetails' 
-        && $rootScope.currentPath != '/item' && $rootScope.currentPath != '/itemdetails'  && $rootScope.currentPath != '/statuschart' && $rootScope.currentPath != '/faq_question' && $rootScope.currentPath != '/changepassword') {
+        && $rootScope.currentPath != '/item' && $rootScope.currentPath != '/itemdetails' && $rootScope.currentPath != '/testchart'  && $rootScope.currentPath != '/statuschart' && $rootScope.currentPath != '/faq_question' && $rootScope.currentPath != '/changepassword') {
         $location.path('/login')
         return;
       }
@@ -112,8 +113,8 @@ config(['$locationProvider', '$routeProvider', function ($locationProvider, $rou
 /*     $rootScope.api_url = "http://192.168.1.48:3007/";
 
 */
-  //$rootScope.api_url = "http://192.168.1.71:3040/";
-   $rootScope.api_url = "http://192.168.1.48:3007/";
+  $rootScope.api_url = "http://192.168.1.71:3040/";
+   //$rootScope.api_url = "http://192.168.1.48:3007/";
      $rootScope.api_url_report = "http://192.168.1.48:3007/";
 
 
